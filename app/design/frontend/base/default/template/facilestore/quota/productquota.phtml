@@ -1,0 +1,11 @@
+<?php if(count($this->getParcelas()) && $this->isEnable()): ?>
+<div class="parcelamento">
+    <ul>
+        <?php foreach($this->getParcelas() as $parcela): ?>
+        <li>
+            <?php echo $parcela['numero']?>x  <?php echo $parcela['valor_parcela']; ?> - <?php echo $parcela['valor_parcela_total']; ?>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+<?php endif; ?>

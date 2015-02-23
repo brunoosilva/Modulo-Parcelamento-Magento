@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <facilestore translate="label" module="quota">
+            <label>Facile Store Extensions</label>
+            <sort_order>100</sort_order>
+        </facilestore>
+    </tabs>
+    <sections>
+        <facilestore_quota translate="label" module="quota">
+            <label>Parcelas Produtos</label>
+            <tab>facilestore</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+ 
+            <groups>
+                <general translate="label" module="quota">
+                    <label>Configurações de parcelas no produto</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+ 
+                    <fields>
+                        <enable translate="label">
+                            <label>Habilitar: </label>
+                            <comment>Habilitar parcelas nos produtos.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </enable>
+                        <qtdparcelas translate="label">
+                            <label>Quantidade de parcela: </label>
+                            <comment>Número de parcelas</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </qtdparcelas>
+                        <valorminimoparcela translate="label">
+                            <label>Valor mínimo da parcela: </label>
+                            <comment>Valor mínimo da parcela, informe "0" caso não tenha.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </valorminimoparcela>
+                        <juroscartao translate="label">
+                            <label>Juros: </label>
+                            <comment>Valor do juros ao mês, se não tive informe 0.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </juroscartao>
+                    </fields>
+                </general>
+            </groups>
+        </facilestore_quota>
+    </sections>
+</config>
