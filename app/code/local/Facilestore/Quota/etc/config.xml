@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Facilestore_Quota>
-            <version>0.0.1</version>          
+            <version>0.0.1</version>
         </Facilestore_Quota>
     </modules>   
     <global>
@@ -63,6 +63,9 @@
                 <qtdparcelas>12</qtdparcelas>
                 <valorminimoparcela>0</valorminimoparcela>
                 <juroscartao>0.99</juroscartao>
+                <boleto_enable>1</boleto_enable>
+                <porcentagem_boleto>5</porcentagem_boleto>
+                <txt_boleto>#percent#% Desc. Boleto - #valor#</txt_boleto>
             </general>
         </facilestore_quota>
     </default>

@@ -1,11 +1,26 @@
-<?php if(count($this->getParcelas()) && $this->isEnable()): ?>
-<div class="parcelamento">
-    <ul>
-        <?php foreach($this->getParcelas() as $parcela): ?>
-        <li>
+<?php if($this->isEnable()): ?>
+    <?php if($this->getDescBoleto()): ?>
+    <div class="boleto_desconto">
+        <?php echo $this->getDescBoleto(); ?>
+    </div>
+    <?php endif; ?>
+
+    <?php if($this->isCatalog()): ?>
+        <div class="parcelamento">
+            <?php $parcela = $this->getParcelas(true);?>
             <?php echo $parcela['numero']?>x  <?php echo $parcela['valor_parcela']; ?> - <?php echo $parcela['valor_parcela_total']; ?>
-        </li>
-        <?php endforeach; ?>
-    </ul>
-</div>
+        </div>
+    <?php else: ?>
+        <?php if(count($this->getParcelas())): ?>
+        <div class="parcelamento">
+            <ul>
+                <?php foreach($this->getParcelas() as $parcela): ?>
+                <li>
+                    <?php echo $parcela['numero']?>x  <?php echo $parcela['valor_parcela']; ?> - <?php echo $parcela['valor_parcela_total']; ?>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <?php endif; ?>        
+    <?php endif; ?>
 <?php endif; ?>

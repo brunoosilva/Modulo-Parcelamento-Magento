@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
-<layout version="0.0.1">
+<layout version="0.1.0">
     <catalog_product_view>
         <reference name="product.info">
             <block type="quota/productquota" name="Facilestore_Quota_ProductQuota"  template="facilestore/quota/productquota.phtml"/>
         </reference>
     </catalog_product_view>
+    <catalog_category_default>
+        <reference name="product_list">
+            <block type="quota/productquota" name="Facilestore_Quota_ProductQuota"  template="facilestore/quota/productquota.phtml"/>
+        </reference>
+    </catalog_category_default>    
 </layout>

@@ -62,6 +62,34 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </juroscartao>
+                        <boleto_enable translate="label">
+                            <label>Desconto no boleto ?</label>
+                            <comment>Exibir desconto no boleto, porem não está implementado para o Checkout. Só funciona para visualização.</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </boleto_enable>
+                        <porcentagem_boleto translate="label">
+                            <label>Porcentagem Desc. Boleto: </label>
+                            <comment>Porcetagem do desconto em pagamento com Boleto.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </porcentagem_boleto>
+                        <txt_boleto translate="label">
+                            <label>Texto Boleto: </label>
+                            <comment>Informe o texto para exibir, utilize as tags dinâmicas #percent# e #valor#, caso necessite. Ex.: #percent#% Desc Boleto - #valor#</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </txt_boleto>
                     </fields>
                 </general>
             </groups>
